@@ -1,5 +1,5 @@
 pkgname=juffed
-pkgver=0.10.r67.g27e19a2
+pkgver=0.10.r72.gf638b2c
 pkgrel=1
 pkgdesc='A lightweight cross-platform text editor. Qt5 UI. Development version.'
 arch=('x86_64')
