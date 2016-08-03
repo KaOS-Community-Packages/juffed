@@ -15,15 +15,6 @@ sha512sums=(
 	'SKIP'
 	'ac9be39d90d5696142b61e00f74577cec23d379be128965642a92cabefd5ed9c511fedeb7cec068f24224d96aa5ace9992920c5a4dd54f90c59a93442f14079a' 
 )
-pkgver() {
-	# Updating package version
-	cd ${srcdir}/${pkgname}
-	(
-		set -o pipefail
-		git describe --long --tags 2>/dev/null | sed -r 's/^juffed-//;s/([^-]*-g)/r\1/;s/-/./g' ||
-		printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-	)
-}
 
 prepare() {
         
